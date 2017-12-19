@@ -92,4 +92,17 @@ class TicTacToe
       nil
     end
   end
+
+  def play
+    if over?
+      if draw?
+        puts "Cat's Game!"
+      elsif won?
+        puts "Congratulations #{winner}!"
+      end
+    else
+      turn
+      play
+    end
+  end
 end
