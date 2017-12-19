@@ -76,4 +76,12 @@ class TicTacToe
       !(position.nil? || position == " ")
     end
   end
+
+  def draw?
+    (full? && !won?) ? true : false
+  end
+
+  def over?
+    (draw? || won?) ? true : false
+  end
 end
